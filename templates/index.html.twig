@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <button id="location_autosearch">Me Trouver</button>
+            <br/><br/>
+            ou
+            <br/><br/>
+            <form id="baseForm" action="search">
+                Entrer mon adresse
+                <input id="autocomplete" class="address_input" placeholder="Enter your address" onFocus="geolocate()" type="text" name="city" />
+                <input type="hidden" class="hidden_lat" value="" name="lat" />
+                <input type="hidden" class="hidden_lng" value="" name="lng" />
+                <input type="submit" class="submit_form" value="Go" />
+            </form>
+
+        </div>
+        <div id="map"></div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3PLVl_gb1MhoLcLLt2TCCW_QUdAL5uRo&signed_in=true&libraries=places" ></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/gmaps.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+{% endblock %}

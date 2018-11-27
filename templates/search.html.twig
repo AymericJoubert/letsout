@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="controls">
+                <div class="city control">
+                    <div class="label">Lieu :</div>
+                    <input id="autocomplete" class="address_input" value="{{ city }}" onFocus="geolocate()" type="text" name="city" />
+                    <input type="submit" class="submit_form" value="Go" />
+                </div>
+                <div class="date control">
+                    <div class="label">Date :</div>
+                    <input type="text" id="datepicker">
+                    <button id="reset">Effacer</button>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div id="legend">
+                <div class="icon">
+                    <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png">
+                    {#Votre position#}
+                </div>
+                <div class="icon">
+                    <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png">
+                    {#Evenement Facebook#}
+                </div>
+                <div class="icon">
+                    <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png">
+                    {#Autre#}
+                </div>
+                <div class="icon">
+                    <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png">
+                    {#Autre#}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/gmaps.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPlHfWf1sDqyE-22yytWrLcS7yykgDgco&signed_in=true&libraries=places&callback=initAutocomplete" async defer></script>
+{% endblock %}
