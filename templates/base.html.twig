@@ -2,20 +2,50 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Letsout{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
 
+
+
+            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+            <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+            {#<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />#}
+            {#<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>#}
+
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+    <header>
+            <div class="content">
+                <div class="float-left">
+                    <span class="title">Letsout</span>
+                </div>
+                <div class="float-right">
+                    <span class="title-right">Lets go out!</span>
+                </div>
+            </div>
+        </header>
         {% block body %}{% endblock %}
         <footer>
             footer
         </footer>
+        <div class="post-footer">
+            <div class="content">
+                <div class="float-left">
+                    Copyright <span>Letsout</span> 2018
+                </div>
+                <div class="float-right">
+                    Powered by <span>ayjou</span>
+                </div>
+            </div>
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
