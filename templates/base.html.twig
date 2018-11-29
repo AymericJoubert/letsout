@@ -28,7 +28,6 @@
     </head>
 
     <body>
-
         <header>
             <div class="header-content">
                 <a href="{{ url('index') }}" rel="Homepage">
@@ -42,10 +41,14 @@
                 </div>
             </div>
         </header>
+
         {% block body %}{% endblock %}
+
         <footer>
-            <div class="footer-column-wrapper">
-                <a href="">Contact Us</a>
+            <div class="content">
+                <div class="footer-column-wrapper">
+                    <a href="">Contact Us</a>
+                </div>
             </div>
         </footer>
         <div class="post-footer">
