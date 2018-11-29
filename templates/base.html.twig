@@ -3,21 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Letsout{% endblock %}</title>
+        <meta name="description" content="Localize events near to you with Letsout">
+        <meta name="robots" content="index, follow">
+        <link href="{{ app.request.uri }}" rel="canonical">
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}" />
+
         {% block stylesheets %}
             <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-
-
-
-
-            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
             <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
-
-            {#<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />#}
-            {#<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>#}
-
+            <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
         {% endblock %}
-        {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
 
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
@@ -27,14 +26,17 @@
             });
         </script>
     </head>
+
     <body>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
-    <header>
-            <div class="content">
-                <div class="float-left">
-                    <span class="title">Letsout</span>
-                </div>
+
+        <header>
+            <div class="header-content">
+                <a href="{{ url('index') }}" rel="Homepage">
+                    <div class="float-left">
+                        <img src="{{ asset('img/logo.png') }}" class="logo-letsout" alt="Logo Letsout" />
+                        <span class="title">Letsout</span>
+                    </div>
+                </a>
                 <div class="float-right">
                     <span class="title-right">Lets go out!</span>
                 </div>
@@ -42,7 +44,9 @@
         </header>
         {% block body %}{% endblock %}
         <footer>
-            footer
+            <div class="footer-column-wrapper">
+                <a href="">Contact Us</a>
+            </div>
         </footer>
         <div class="post-footer">
             <div class="content">

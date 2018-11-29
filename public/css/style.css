@@ -35,6 +35,18 @@ footer {
     color: white;
     padding-top: 8px;
 }
+.header-content {
+    width: 80%;
+    margin: 0 auto;
+}
+.header-content a {
+    color: black;
+}
+.logo-letsout {
+    width: 50px;
+    margin-top: -10px;
+    margin-right: 10px;
+}
 .content {
     width: 1280px;
     margin: 0 auto;
@@ -42,8 +54,30 @@ footer {
 .post-footer span {
     color: rgb(253,164,0);
 }
-
-
+.concept {
+    text-align: center;
+}
+.widget-wrapper {
+    height: 275px;
+}
+.widget-block {
+    width: 400px;
+    margin-right: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(239,239,239);
+    padding: 15px;
+    float: left;
+}
+.widget-block.last {
+    margin-right: 0;
+}
+.widget-block .title {
+    text-align:center;
+    margin-bottom: 10px;
+}
+/*.widget-block.legend p {*/
+    /*width: 100%;*/
+/*}*/
 .geocoder {
     position:absolute;
     z-index:1;
@@ -52,4 +86,6 @@ footer {
     margin-left:-25%;
     top:20px;
 }
-.mapboxgl-ctrl-geocoder { min-width:100%; }
+.mapboxgl-ctrl-geocoder {
+    min-width:100%;
+}

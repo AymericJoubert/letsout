@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Letsout | Contact Us{% endblock title %}
+
+{% block body %}
+    <div class="content">
+        <div class="form-header">
+            One question? One information? One recommendation? Send us a message !
+        </div>
+        {{ form_start(our_form) }}
+        {{ form_widget(our_form) }}
+        <input type="submit" value="Send" />
+        {{ form_end(our_form) }}
+    </div>
+{% endblock %}
