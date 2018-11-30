@@ -26,10 +26,7 @@ geolocate = function() {
             map.flyTo({center: [position.coords.longitude, position.coords.latitude], zoom: 15});
         }, function(error) {
             console.log(error);
-            alert('We aren\'t authorized to get your position.');
         });
-    } else {
-        alert('Unable to get position');
     }
 };
 

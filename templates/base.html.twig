@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Letsout{% endblock %}</title>
         <meta name="description" content="Localize events near to you with Letsout">
+        <meta name="og:description" content="Localize events near to you with Letsout">
         <meta name="robots" content="index, follow">
         <link href="{{ app.request.uri }}" rel="canonical">
         <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}" />
@@ -44,13 +45,17 @@
 
         {% block body %}{% endblock %}
 
-        <footer>
-            <div class="content">
-                <div class="footer-column-wrapper">
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-        </footer>
+        {#<footer>#}
+            {#<div class="content">#}
+                {#<div class="footer-column-wrapper">#}
+                    {#<a href="">Need Help?</a>#}
+                    {#<a href="">Who are we? Contact Us</a>#}
+                {#</div>#}
+                {#<div class="footer-column-wrapper">#}
+                    {#<a href="">Sitemap</a>#}
+                {#</div>#}
+            {#</div>#}
+        {#</footer>#}
         <div class="post-footer">
             <div class="content">
                 <div class="float-left">

@@ -26,7 +26,7 @@ header .title-right {
 }
 footer {
     background-color: rgb(240,242,241);
-    height: 140px;
+    height: 100px;
 }
 .post-footer {
     width: 100%;
@@ -54,6 +54,13 @@ footer {
 .post-footer span {
     color: rgb(253,164,0);
 }
+.footer-column-wrapper {
+    width: 20%;
+    float: left;
+}
+.footer-column-wrapper a {
+    display:block;
+}
 .concept {
     text-align: center;
 }
@@ -75,9 +82,11 @@ footer {
     text-align:center;
     margin-bottom: 10px;
 }
-/*.widget-block.legend p {*/
-    /*width: 100%;*/
-/*}*/
+.legend p {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
 .geocoder {
     position:absolute;
     z-index:1;
