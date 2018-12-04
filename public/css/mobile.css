@@ -1,0 +1,23 @@
+@media only screen and (min-width : 768px) {
+    body {
+        font-size: 20px;
+    }
+    .legend {
+        height: 120px;
+    }
+    .legend p {
+        width: 50%;
+    }
+    .widget-wrapper {
+        height: inherit;
+    }
+    .widget-wrapper h3 {
+        text-align: center;
+    }
+    .widget-wrapper .widget-block {
+        float: none;
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+}
