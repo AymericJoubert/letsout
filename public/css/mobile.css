@@ -1,12 +1,16 @@
-@media only screen and (min-width : 768px) {
+@media only screen and (max-width : 768px) {
     body {
-        font-size: 20px;
+        font-size: 18px;
     }
     .legend {
         height: 120px;
     }
     .legend p {
         width: 50%;
+        font-size: 12px;
+    }
+    .legend img {
+        width: 10%;
     }
     .widget-wrapper {
         height: inherit;
@@ -16,8 +20,11 @@
     }
     .widget-wrapper .widget-block {
         float: none;
-        width: 75%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 15px auto 0 auto;
         padding-top: 0;
+    }
+    .desktop-only {
+        display: none;
     }
 }
