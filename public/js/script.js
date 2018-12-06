@@ -13,7 +13,8 @@ var map = new mapboxgl.Map({
 var mapboxGeocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
 });
-map.addControl(mapboxGeocoder);
+document.getElementById('geocoder').appendChild(mapboxGeocoder.onAdd(map));
+// map.addControl(mapboxGeocoder);
 map.addControl(new mapboxgl.GeolocateControl({
     positionOptions: {
         enableHighAccuracy: true
@@ -34,7 +35,7 @@ map.on('load', function() {
         "type": "circle",
         "paint": {
             "circle-radius": 10,
-            "circle-color": "#007cbf"
+            "circle-color": "#00b1ff"
         }
     });
 });
@@ -48,6 +49,7 @@ geolocate = function() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             map.flyTo({center: [position.coords.longitude, position.coords.latitude], zoom: 15});
+            updateFacebookMap(position.coords.longitude, position.coords.latitude);
         }, function(error) {
             console.log(error);
         });

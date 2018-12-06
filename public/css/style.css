@@ -7,7 +7,7 @@ html, body {
     width: 80%; /* important! if you need full width display */
     height: 400px;
     border-radius: 5px;
-    margin: 20px auto;
+    margin: 60px auto 20px auto;
 }
 .info {
     min-height: 200px;
@@ -54,13 +54,6 @@ footer {
 .post-footer span {
     color: rgb(253,164,0);
 }
-.footer-column-wrapper {
-    width: 20%;
-    float: left;
-}
-.footer-column-wrapper a {
-    display:block;
-}
 .concept {
     text-align: center;
 }
@@ -93,13 +86,14 @@ footer {
     text-align: center;
 }
 .geocoder {
-    position:absolute;
-    z-index:1;
-    width:50%;
-    left:50%;
-    margin-left:-25%;
-    top:20px;
+    position: absolute;
+    width: 400px;
+    top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
-.mapboxgl-ctrl-geocoder {
-    min-width:100%;
+.geocoder .mapboxgl-ctrl-geocoder {
+    width: 600px;
 }
